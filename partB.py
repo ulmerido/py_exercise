@@ -229,11 +229,8 @@ MAX_POINT_VAL = 100
 
 
 def run():
-    rectangles = create_random_rectangle_list(
-        NUM_OF_SHAPES, MIN_POINT_VAL, MAX_POINT_VAL)
-
-    triangles = create_random_triangle_list(
-        NUM_OF_SHAPES, MIN_POINT_VAL, MAX_POINT_VAL)
+    rectangles = create_random_rectangle_list(NUM_OF_SHAPES, MIN_POINT_VAL, MAX_POINT_VAL)
+    triangles = create_random_triangle_list(NUM_OF_SHAPES, MIN_POINT_VAL, MAX_POINT_VAL)
 
     print('\nBefore sorting rectangles:')
     print_list(rectangles)
@@ -250,8 +247,7 @@ def run():
     to_add = create_random_rectangle_list(1, MIN_POINT_VAL, MAX_POINT_VAL)
     print('\nCreated rectangle: ')
     print(str(to_add[0]))
-    new_rectangle_params = [to_add[0].get_width(
-    ), to_add[0].get_height(), to_add[0].get_point()]
+    new_rectangle_params = [to_add[0].get_width(), to_add[0].get_height(), to_add[0].get_point()]
     print('\nAdding to sorted list...')
     add_rectangle(rectangles, new_rectangle_params)
     print('\nPrinting new rectangle list: ')
